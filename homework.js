@@ -88,23 +88,55 @@
 // 6 The murderer is Mrs White.
 // RIGHT
 
-let murderer = 'Colonel Mustard';
+// let murderer = 'Colonel Mustard';
+
+// const changeMurderer = function() {
+//     murderer = 'Mr. Green';
+  
+//     const plotTwist = function() {
+//       murderer = 'Mrs. White';
+//     }
+  
+//     plotTwist();
+//   }
+  
+//   const declareMurderer = function () {
+//     return `The murderer is ${murderer}.`;
+//   }
+  
+//   changeMurderer();
+//   const verdict = declareMurderer();
+//   console.log(verdict);
+
+
+// 7 
+// The murderer is Colonel Mustard.
+// WRONG - The murderer is Mr. Green.
+// WHY? Plot twist (Colonel Mustard) is called at the end of the changeMurder function
+
+let murderer = 'Professor Plum';
 
 const changeMurderer = function() {
-    murderer = 'Mr. Green';
-  
-    const plotTwist = function() {
-      murderer = 'Mrs. White';
+  murderer = 'Mr. Green';
+
+  const plotTwist = function() {
+    let murderer = 'Colonel Mustard';
+
+    const unexpectedOutcome = function() {
+      murderer = 'Miss Scarlet';
     }
-  
-    plotTwist();
+
+    unexpectedOutcome();
   }
-  
-  const declareMurderer = function () {
-    return `The murderer is ${murderer}.`;
-  }
-  
-  changeMurderer();
-  const verdict = declareMurderer();
-  console.log(verdict);
+
+  plotTwist();
+}
+
+const declareMurderer = function() {
+  return `The murderer is ${murderer}.`;
+}
+
+changeMurderer();
+const verdict = declareMurderer();
+console.log(verdict);
   
