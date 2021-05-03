@@ -114,29 +114,84 @@
 // WRONG - The murderer is Mr. Green.
 // WHY? Plot twist (Colonel Mustard) is called at the end of the changeMurder function
 
+// let murderer = 'Professor Plum';
+
+// const changeMurderer = function() {
+//   murderer = 'Mr. Green';
+
+//   const plotTwist = function() {
+//     let murderer = 'Colonel Mustard';
+
+//     const unexpectedOutcome = function() {
+//       murderer = 'Miss Scarlet';
+//     }
+
+//     unexpectedOutcome();
+//   }
+
+//   plotTwist();
+// }
+
+// const declareMurderer = function() {
+//   return `The murderer is ${murderer}.`;
+// }
+
+// changeMurderer();
+// const verdict = declareMurderer();
+// console.log(verdict);
+
+// 8 The weapon is Lead Pipe.
+// WRONG - The weapon is Candle Stick.
+// I got the last one wrong so I tried to look at this one differently. This one also changes const's inside the function. I see that this weapon changed because the crime was in the dining room, but what id the difference between this one and 7?
+
+// const scenario = {
+//     murderer: 'Mrs. Peacock',
+//     room: 'Conservatory',
+//     weapon: 'Lead Pipe'
+//   };
+  
+//   const changeScenario = function() {
+//     scenario.murderer = 'Mrs. Peacock';
+//     scenario.room = 'Dining Room';
+  
+//     const plotTwist = function(room) {
+//       if (scenario.room === room) {
+//         scenario.murderer = 'Colonel Mustard';
+//       }
+  
+//       const unexpectedOutcome = function(murderer) {
+//         if (scenario.murderer === murderer) {
+//           scenario.weapon = 'Candle Stick';
+//         }
+//       }
+  
+//       unexpectedOutcome('Colonel Mustard');
+//     }
+  
+//     plotTwist('Dining Room');
+//   }
+  
+//   const declareWeapon = function() {
+//     return `The weapon is ${scenario.weapon}.`
+//   }
+  
+//   changeScenario();
+//   const verdict = declareWeapon();
+//   console.log(verdict);
+
+// 9 The murderer is Mrs. Peacock.
+// WRONG - The murderer is Professor Plum.
+// arent let variables supposed to change no matter ho you use them?
+
 let murderer = 'Professor Plum';
 
-const changeMurderer = function() {
-  murderer = 'Mr. Green';
-
-  const plotTwist = function() {
-    let murderer = 'Colonel Mustard';
-
-    const unexpectedOutcome = function() {
-      murderer = 'Miss Scarlet';
-    }
-
-    unexpectedOutcome();
-  }
-
-  plotTwist();
+if (murderer === 'Professor Plum') {
+  let murderer = 'Mrs. Peacock';
 }
 
 const declareMurderer = function() {
   return `The murderer is ${murderer}.`;
 }
 
-changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
-  
